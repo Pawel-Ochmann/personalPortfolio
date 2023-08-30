@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'font-main';
+  src: url('../fonts/cinzel/Cinzel-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'font-secondary';
+  src: url('../fonts/dosis/Dosis-VariableFont_wght.ttf');
+}
+
+//variables
+
+:root {
+  --shadow-main: 8px 8px 20px -10px rgba(66, 68, 90, 1);
+  --shadow-text: 4px 4px 6px rgba(66, 68, 90, 1);
+
+  --color-theme: rgba(9, 142, 174, 255);
+  --color-font-light: white;
+  --color-font-dark: black;
+}
+
+body {
+  background-color: var(--color-theme);
+  text-shadow: var(--shadow-text);
+  font-family: 'font-main';
+  color: var(--color-font-dark);
+  p {
+    font-family: 'font-secondary';
+    color: blue;
+    font-size: 2rem;
+    background-color: #d6c494;
+    box-shadow: var(--shadow-main);
+  }
+}
+
+svg {
+    width:100px;
+    fill: black;
+}
