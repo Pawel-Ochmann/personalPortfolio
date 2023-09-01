@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'font-main';
-  src: url('../fonts/cinzel/Cinzel-VariableFont_wght.ttf');
+  src: url('../fonts/main/PlayfairDisplay-VariableFont_wght.ttf');
 }
 
 @font-face {
   font-family: 'font-secondary';
-  src: url('../fonts/dosis/Dosis-VariableFont_wght.ttf');
+  src: url('../fonts/secondary/Roboto-Regular.ttf');
 }
 
 //variables
@@ -17,23 +17,34 @@
   --color-theme: rgba(9, 142, 174, 255);
   --color-font-light: white;
   --color-font-dark: black;
+  font-size: calc(1vw + 10px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--color-font-dark);
 }
 
 body {
-  background-color: var(--color-theme);
-  text-shadow: var(--shadow-text);
-  font-family: 'font-main';
-  color: var(--color-font-dark);
-  p {
-    font-family: 'font-secondary';
-    color: blue;
-    font-size: 2rem;
-    background-color: #d6c494;
-    box-shadow: var(--shadow-main);
+  display: grid;
+  justify-content: center;
+
+  header {
+    background: linear-gradient(
+      -30deg,
+      rgba(255, 255, 255, 1) 40%,
+      rgba(8, 145, 178, 1) 40%
+    );
+    .picture {
+      padding: 2rem;
+    }
   }
 }
 
 svg {
-    width:100px;
-    fill: black;
+  width: 20px;
+  fill: black;
 }
