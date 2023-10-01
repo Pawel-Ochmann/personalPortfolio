@@ -18,7 +18,11 @@
   --color-font-light: white;
   --color-font-dark: black;
   --color-font-secondary-dark: rgb(94, 94, 94);
-  font-size: calc(1vw + 10px);
+
+  --font-size: clamp(32px, 3.5vw, 48px);
+  --font-size-headings: calc(.8em + 10vw);
+
+  --padding-content: 6%;
 }
 
 * {
@@ -52,10 +56,12 @@ svg {
 body {
   display: grid;
   justify-content: center;
+  font-size: var(--font-size);
 
   header {
     display: grid;
-    gap:1rem;
+    gap: 0.5rem;
+    margin: 0 auto;
     background: linear-gradient(
       -30deg,
       rgba(255, 255, 255, 1) 55%,
@@ -67,14 +73,14 @@ body {
       align-items: end;
       h1 {
         margin: 0.5rem;
-        font-size: 3rem;
         width: min-content;
         color: var(--color-font-light);
         text-shadow: var(--shadow-text);
+        font-size: calc(var(--font-size-headings) + 1rem);
       }
 
       img {
-        width: 300px;
+        width: 100%;
         box-shadow: var(--shadow-main);
       }
 
@@ -86,11 +92,10 @@ body {
     }
     .description {
       display: grid;
-      padding: 1rem;
-      max-width: 350px;
+      padding: 1rem var(--padding-content);
       h2 {
         text-align: center;
-        font-size: 2.5rem;
+        font-size: calc(var(--font-size-headings) - 1rem);
       }
       p {
         letter-spacing: 2px;
@@ -98,9 +103,23 @@ body {
     }
     .socials {
       display: grid;
-      justify-content:center;
-      grid-template-columns: repeat(3,min-content);
-      gap: 1rem;
+      justify-content: center;
+      grid-template-columns: repeat(3, min-content);
+      gap: 15%;
+      svg {
+        width: clamp(1rem, 10vw , 4rem );
+      }
+    }
+  }
+}
+
+main {
+  padding: var(--padding-content);
+  display: flex;
+  flex-direction: column;
+  .mainHeader {
+    h2 {
+      margin: 0 auto;
     }
   }
 }
