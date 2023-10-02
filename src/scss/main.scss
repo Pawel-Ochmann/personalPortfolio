@@ -56,6 +56,16 @@ p {
   color: var(--color-font-secondary-dark);
 }
 
+button {
+  background-color:transparent;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+  &:hover {
+    opacity: .5;
+  }
+}
+
 svg {
   fill: black;
   width: 2rem;
@@ -118,10 +128,9 @@ body {
 }
 
 main {
-  margin-top: 8rem;
+  margin-top: 4rem;
   padding: var(--padding-content);
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 10vw;
   h2 {
     margin: 0 auto;
@@ -205,10 +214,10 @@ footer {
   .socials {
     display: flex;
     justify-content: center;
-    gap: 10vw;
+    gap: 3rem;
     padding: 1rem 0 3rem 0;
     svg {
-      width: calc(0.8rem + 8vw);
+      width: 3.5rem;
     }
   }
   .footerImage {
@@ -237,19 +246,19 @@ footer {
             left: 5vw;
             top: 7vw;
             position: absolute;
-            max-width:35vw;
+            max-width: 35vw;
           }
           h1 {
             width: max-content;
-            position:absolute;
+            position: absolute;
             top: 8vw;
-            right:5%;
+            right: 5%;
             font-size: 3rem;
           }
         }
         .description {
           display: block;
-          padding:1rem;
+          padding: 1rem;
           h2 {
             font-size: 3.5rem;
           }
@@ -257,6 +266,64 @@ footer {
             text-align: justify;
             font-size: 2rem;
           }
+        }
+        .socials {
+          padding: 2rem;
+        }
+      }
+    }
+    main {
+      grid-template-columns: 1fr 1fr;
+      gap:10vw 5vw;
+      .mainHeader {
+        grid-column: span 2;
+      }
+      .projectBox {
+        .projectImage {
+          h2 {
+            font-size: 3rem;
+          }
+        }
+        .projectDescription {
+          padding: 1rem 2rem;
+          .projectNameBox {
+            gap: 3vw;
+            padding: 0;
+            h3 {
+              font-size: 2rem;
+            }
+          }
+          p {
+            margin-top:1rem;
+            padding: 0;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: var(--padding-content);
+      background-color: #0891b2;
+      .footerContainer {
+        .tel, .mail {
+          align-items: center;
+        }
+        .socials {
+          justify-content: start;
+        }
+        padding:0;
+        h2 {
+          font-size: 3rem;
+          text-align: start;
+        }
+        p, p.bigger {
+          font-size: 1.3rem;
+        }
+        p.bigger {
+          padding-right: 1rem;
         }
       }
     }
