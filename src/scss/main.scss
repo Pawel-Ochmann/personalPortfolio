@@ -22,7 +22,7 @@
   --font-size: clamp(20px, 3.5vw, 48px);
   --font-size-headings: calc(0.8em + 10vw);
 
-  --padding-content: 6%;
+  --padding-content: 10vw;
 }
 
 * {
@@ -67,8 +67,6 @@ body {
   font-size: var(--font-size);
 
   header {
-    display: grid;
-    gap: 5vw;
     margin: 0 auto;
     background: linear-gradient(
       -30deg,
@@ -222,33 +220,43 @@ footer {
 
 @media (min-width: 700px) {
   body {
+    position: relative;
     header {
-      position: relative;
-      .picture {
-        align-items: start;
-        justify-content: end;
-        overflow: hidden;
-        h1 {
-          width: max-content;
-          text-align: end;
-          z-index: 100;
-          font-size: 60px;
-        }
-        img {
-          position: absolute;
-          width: 40%;
-          top: 2rem;
-          left: 2rem;
-          z-index: -1000;
-        }
-      }
-      .description {
-        background-color: white;
-        margin: 0 var(--padding-content);
-        .placeholder {
+      padding: var(--padding-content);
+      .wrapper {
+        background-color: #fff;
+        margin-top: 5rem;
+        box-shadow: var(--shadow-main);
+        padding: 1rem;
+        .picture {
           float: left;
-          width: 50%;
-          height: 10rem;
+          padding: 0;
+          width: 40%;
+          height: 37vw;
+          img {
+            left: 5vw;
+            top: 7vw;
+            position: absolute;
+            max-width:35vw;
+          }
+          h1 {
+            width: max-content;
+            position:absolute;
+            top: 8vw;
+            right:5%;
+            font-size: 3rem;
+          }
+        }
+        .description {
+          display: block;
+          padding:1rem;
+          h2 {
+            font-size: 3.5rem;
+          }
+          p {
+            text-align: justify;
+            font-size: 2rem;
+          }
         }
       }
     }
