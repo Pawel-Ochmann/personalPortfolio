@@ -57,12 +57,12 @@ p {
 }
 
 button {
-  background-color:transparent;
+  background-color: transparent;
   border: none;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
   &:hover {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -274,7 +274,7 @@ footer {
     }
     main {
       grid-template-columns: 1fr 1fr;
-      gap:10vw 5vw;
+      gap: 10vw 5vw;
       .mainHeader {
         grid-column: span 2;
       }
@@ -294,7 +294,7 @@ footer {
             }
           }
           p {
-            margin-top:1rem;
+            margin-top: 1rem;
             padding: 0;
             font-size: 1.5rem;
           }
@@ -308,22 +308,100 @@ footer {
       padding: var(--padding-content);
       background-color: #0891b2;
       .footerContainer {
-        .tel, .mail {
+        .tel,
+        .mail {
           align-items: center;
         }
         .socials {
           justify-content: start;
         }
-        padding:0;
+        padding: 0;
         h2 {
           font-size: 3rem;
           text-align: start;
         }
-        p, p.bigger {
+        p,
+        p.bigger {
           font-size: 1.3rem;
         }
         p.bigger {
           padding-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    header {
+      padding: 0 var(--padding-content);
+      .wrapper {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        background-color: initial;
+        box-shadow: none;
+        .picture {
+          width: 100%;
+          float: initial;
+          img {
+            position: initial;
+            max-width: 100%;
+          }
+          h1 {
+            position: initial;
+            width: auto;
+          }
+        }
+        .description {
+          padding: 1.5rem;
+          margin-top: 2vw;
+          aspect-ratio: 2;
+          justify-content: space-around;
+          display: flex;
+          gap: 1rem;
+          flex-direction: column;
+          align-self: center;
+          background-color: white;
+          box-shadow: var(--shadow-main);
+          p {
+            padding: 0;
+            font-size: 1.5rem;
+          }
+          .socials {
+            padding: 0;
+            justify-content: end;
+            svg {
+              width: 3rem;
+            }
+          }
+        }
+      }
+    }
+    main {
+      grid-template-columns: 1fr 1fr 1fr;
+      .mainHeader {
+        grid-column: span 3;
+      }
+      .projectBox {
+        .projectDescription {
+          padding: 1rem 1vw;
+          .projectNameBox {
+            gap: 2vw;
+            svg {
+              width: 3rem;
+            }
+          }
+        }
+      }
+    }
+    footer {
+      padding: 5vw var(--padding-content);
+      gap: 5vw;
+      .footerContainer {
+        p, p.bigger {
+          font-size: calc(1rem + 1vw);
         }
       }
     }
