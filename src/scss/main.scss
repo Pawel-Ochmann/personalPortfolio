@@ -45,15 +45,16 @@ h4 {
 
 h2 {
   text-align: center;
-  font-size: calc(var(--font-size-headings) - 1rem);
+  font-size: 3rem;
 }
 h3 {
-  font-size: calc(0.2em + 6vw);
+  font-size: 2rem;
 }
 
 p {
   font-family: 'font-secondary';
   color: var(--color-font-secondary-dark);
+  font-size: 1.5rem;
 }
 
 button {
@@ -74,7 +75,6 @@ svg {
 body {
   display: grid;
   justify-content: center;
-  font-size: var(--font-size);
 
   header {
     margin: 0 auto;
@@ -89,10 +89,10 @@ body {
       align-items: end;
       h1 {
         margin: 0.5rem;
-        width: min-content;
+        width: fit-content;
         color: var(--color-font-light);
         text-shadow: var(--shadow-text);
-        font-size: calc(var(--font-size-headings) + 0.5rem);
+        font-size: 4rem;
       }
 
       img {
@@ -112,31 +112,27 @@ body {
       p {
         padding: 5vw 0;
         letter-spacing: 2px;
-        font-size: calc(var(--font-size) + 0.7rem);
+        font-size: 1.5rem;
       }
     }
     .socials {
       display: grid;
       justify-content: center;
       grid-template-columns: repeat(3, min-content);
-      gap: 15%;
+      gap: 2rem;
       svg {
-        width: clamp(1rem, 10vw, 4rem);
+        width: 3rem;
       }
     }
   }
 }
 
 main {
-  margin-top: 4rem;
   padding: var(--padding-content);
   display: grid;
   gap: 10vw;
   h2 {
     margin: 0 auto;
-  }
-  .mainHeader {
-    padding: 2rem;
   }
 
   .projectBox {
@@ -172,11 +168,15 @@ main {
       display: flex;
       padding: 2rem 5vw 3rem 10vw;
       gap: 5vw;
-      svg {
-        width: calc(1rem + 5vw);
+      button {
+        svg {
+          width: 3rem;
+        }
         &:first-of-type {
-          width: calc(0.7rem + 5vw);
           margin-left: auto;
+          svg {
+            width: 2.7rem;
+          }
         }
       }
     }
@@ -198,7 +198,7 @@ footer {
     p {
       color: white;
       &.bigger {
-        font-size: calc(var(--font-size) + 0.7rem);
+        font-size: 2rem;
       }
     }
     .tel,
@@ -207,7 +207,7 @@ footer {
       gap: 0.5rem;
       svg {
         fill: white;
-        height: calc(var(--font-size) + 0.2rem);
+        width: 1.5rem;
       }
     }
   }
@@ -217,7 +217,7 @@ footer {
     gap: 3rem;
     padding: 1rem 0 3rem 0;
     svg {
-      width: 3.5rem;
+      width: 3rem;
     }
   }
   .footerImage {
@@ -240,10 +240,10 @@ footer {
         .picture {
           float: left;
           padding: 0;
-          width: 40%;
-          height: 37vw;
+          width: 42%;
+          height: 39vw;
           img {
-            left: 5vw;
+            left: 6vw;
             top: 7vw;
             position: absolute;
             max-width: 35vw;
@@ -251,20 +251,16 @@ footer {
           h1 {
             width: max-content;
             position: absolute;
-            top: 8vw;
-            right: 5%;
-            font-size: 3rem;
+            top: 5vw;
+            right: 3%;
           }
         }
         .description {
           display: block;
-          padding: 1rem;
-          h2 {
-            font-size: 3.5rem;
-          }
+          padding: 3rem 1rem 1rem 1rem;
           p {
             text-align: justify;
-            font-size: 2rem;
+            font-size: 1.5rem;
           }
         }
         .socials {
@@ -304,7 +300,7 @@ footer {
 
     footer {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 4fr 3fr;
       padding: var(--padding-content);
       background-color: #0891b2;
       .footerContainer {
@@ -320,11 +316,8 @@ footer {
           font-size: 3rem;
           text-align: start;
         }
-        p,
         p.bigger {
-          font-size: 1.3rem;
-        }
-        p.bigger {
+          font-size: 1.5rem;
           padding-right: 1rem;
         }
       }
@@ -399,9 +392,11 @@ footer {
     footer {
       padding: 5vw var(--padding-content);
       gap: 5vw;
+      grid-template-columns: 1fr 1fr;
       .footerContainer {
-        p, p.bigger {
-          font-size: calc(1rem + 1vw);
+        p,
+        p.bigger {
+          font-size: 1.5rem;
         }
       }
     }
